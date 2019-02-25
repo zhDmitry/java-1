@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TableView fx:id="TableView" layoutX="53.0" layoutY="171.0" prefHeight="339.0" prefWidth="822.0">
+        <columns>
+            <TableColumn id="typeColumn" fx:id="typeColumn" minWidth="-Infinity" prefWidth="60.62071990966797" text="Type" />
+            <TableColumn id="lecturerColumn" fx:id="lecturerColumn" minWidth="-Infinity" prefWidth="104.00691986083984" text="Lecturer" />
+            <TableColumn id="scheduleColumn" fx:id="scheduleColumn" minWidth="-Infinity" prefWidth="188.56549072265625" text="Schedule" />
+            <TableColumn id="courseColumn" fx:id="courseColumn" minWidth="-Infinity" prefWidth="92.4344482421875" text="Course" />
+            <TableColumn id="auditoryColumn" fx:id="auditoryColumn" minWidth="-Infinity" prefWidth="127.60003662109375" text="Auditory" visible="false" />
+            <TableColumn id="cathedraColumn" fx:id="cathedraColumn" minWidth="-Infinity" prefWidth="88.8138427734375" text="Cathedra" />
+            <TableColumn id="semesterColumn" fx:id="semesterColumn" minWidth="-Infinity" prefWidth="101.75860595703125" text="Semester" />
+            <TableColumn id="actionsColumn" fx:id="actionsColumn" minWidth="-Infinity" prefWidth="80.79315185546875" text="Actions" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="52.0" layoutY="66.0" prefHeight="100.0" prefWidth="824.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.682373046875" minWidth="10.0" prefWidth="189.93048095703125" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.64349365234375" minWidth="10.0" prefWidth="103.06951904296875" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ChoiceBox fx:id="semesterSelect" prefWidth="150.0" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Semester" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Group" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="groupSelect" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lecturer" GridPane.columnIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cathedra" GridPane.columnIndex="3" />
+            <ChoiceBox fx:id="lecturerSelect" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="cathedraSelect" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button id="addButton" mnemonicParsing="false" onAction="#handleCreate" text="add" textFill="#3ca44c" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Button id="filterButton" mnemonicParsing="false" onAction="#handleFilter" text="filter" textFill="#561fee" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
